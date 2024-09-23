@@ -5,6 +5,7 @@ import { getRecentPosts } from "@/src/services/RecentPosts";
 
 export default async function RecentPosts() {
   const { data: posts } = await getRecentPosts();
+console.log(posts);
 
   return (
     <Container>

@@ -37,12 +37,14 @@
     "no-unused-vars": "off",
     "unused-imports/no-unused-vars": "off",
     "unused-imports/no-unused-imports": "warn",
+    "linebreak-style": ["error", "unix"],
     "@typescript-eslint/no-unused-vars": [
       "warn",
       {
         "args": "after-used",
         "ignoreRestSiblings": false,
-        "argsIgnorePattern": "^_.*?$"
+        "argsIgnorePattern": "^_.*?$",
+        "endOfLine": "auto"
       }
     ],
     "import/order": [

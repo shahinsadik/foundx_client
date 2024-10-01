@@ -1,3 +1,4 @@
+"use client"
 import {
   Navbar as NextUINavbar,
   NavbarContent,
@@ -19,8 +20,13 @@ import { ThemeSwitch } from "@/src/components/UI/theme-switch";
 import { Logo } from "@/src/components/icons";
 
 import NavbarDropDown from "./NavbarDropDown";
+import { useUser } from "@/src/context/user.provider";
+import { Button } from "@nextui-org/react";
+import { useRouter } from "next/navigation";
 
 export const Navbar = () => {
+  const router = useRouter()
+  const {  user } = useUser();
   return (
     <NextUINavbar maxWidth="xl" position="sticky">
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
@@ -54,8 +60,19 @@ export const Navbar = () => {
       >
         <NavbarItem className="hidden sm:flex gap-2">
           <ThemeSwitch />
-          <NavbarDropDown />
         </NavbarItem>
+        {user?.email ? (
+          <NavbarItem className="hidden sm:flex gap-2">
+            <NavbarDropDown />
+          </NavbarItem>
+        ) : (
+          <NavbarItem className="hidden sm:flex gap-2">
+            <Button onClick={()=>router.push('/login')}>Login</Button>
+            <Button onClick={()=>router.push('/register')}>Sign Up</Button>
+            
+          </NavbarItem>
+          
+        )}
       </NavbarContent>
 
       <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">

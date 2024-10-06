@@ -15,6 +15,7 @@ export default function FXSelect({
   name,
   label,
   variant = "bordered",
+  disabled
  
 }: IProps) {
   const {
@@ -29,6 +30,7 @@ export default function FXSelect({
     //   isDisabled={disabled}
       label={label}
       variant={variant}
+      isDisabled={disabled}
     >
       {options.map((option) => (
         <SelectItem key={option.key}>{option.label}</SelectItem>

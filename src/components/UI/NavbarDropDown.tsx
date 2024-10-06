@@ -43,6 +43,11 @@ const NavbarDropDown = () => {
           >
             Create Post
           </DropdownItem>
+          <DropdownItem
+            onClick={() => handleNavigation("/profile/received-claim-requests")}
+          >
+            Claim Request
+          </DropdownItem>
           <DropdownItem onClick={() => handleNavigation("/profile/setting")}>
             Settings
           </DropdownItem>

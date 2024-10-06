@@ -17,7 +17,7 @@ import clsx from "clsx";
 
 import { siteConfig } from "@/src/config/site";
 import { ThemeSwitch } from "@/src/components/UI/theme-switch";
-import { Logo } from "@/src/components/icons";
+import { Logo } from "@/src/assets/icons";
 
 import NavbarDropDown from "./NavbarDropDown";
 import { useUser } from "@/src/context/user.provider";

@@ -3,9 +3,6 @@ import { Button } from "@nextui-org/button";
 import Link from "next/link";
 import Image from "next/image";
 
-
-
-
 import { useUser } from "@/src/context/user.provider";
 import { adminLinks, userLinks } from "./constants";
 import { SidebarOptions } from "./SidebarOptions";
